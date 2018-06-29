@@ -1,6 +1,6 @@
 #!/bin/bash
 
-#Update your home ip with digitalocean.com dns using APIv2
+#Update your ip with digitalocean.com dns using APIv2
 #ShaiChikorel
 
 digiapi=$(cat digiapik)
@@ -22,5 +22,5 @@ fi
 
 
 
-echo -e "\nyour ip is $homeip and the dns ip is $remoteip"
+# echo -e "\nyour ip is $homeip and the dns ip is $remoteip"
 
