@@ -1,7 +1,7 @@
 #!/bin/bash
 
 #Update your ip with digitalocean.com dns using APIv2
-#ShaiChikorel
+
 
 digiapi=$(cat digiapik)
 homeip=$(curl -s ipinfo.io | jq -r '.ip')
