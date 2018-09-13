@@ -2,12 +2,10 @@
 
 #Update your ip with digitalocean.com dns using APIv2
 
-
-
 function main() 
 {
 
-## Vars
+## Vars ##
 
 digiapi=$(cat digiapik)
 homeip=$(curl -s ipinfo.io | jq -r '.ip')
@@ -15,6 +13,7 @@ remoteip=$(curl -s -X GET -H "Content-Type: application/json" -H "Authorization:
 
 
 # compare localip with server ip
+
 if [ $homeip != $remoteip ]; then
 	curl -X PUT -H "Content-Type: application/json" -H "Authorization: Bearer $digiapi" -d '{"data":"'"$homeip"'"}' "https://api.digitalocean.com/v2/domains/chikorel.com/records/48211228"
 	echo " your localIP was update DNS myip.chikorel.com\n"
@@ -39,6 +38,8 @@ if [ ! -f digiapik ]; then
 fi
 
 }
+
+### Runing order ###
 
 errorcheck
 main
