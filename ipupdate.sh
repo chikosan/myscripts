@@ -1,6 +1,7 @@
 #!/bin/bash
 
 #Update your ip with digitalocean.com dns using APIv2
+# now the script more readable
 
 function main() 
 {
