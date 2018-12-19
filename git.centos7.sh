@@ -1,14 +1,5 @@
 #!/bin/bash
 # Install git on centos7
-if [ ! -f /etc/yum.repos.d/wandisco-git.repo ]; then
-sudo cat <<EOT >> /etc/yum.repos.d/wandisco-git.repo
-[wandisco-git]
-name=Wandisco GIT Repository
-baseurl=http://opensource.wandisco.com/centos/7/git/$basearch/
-enabled=1
-gpgcheck=1
-gpgkey=http://opensource.wandisco.com/RPM-GPG-KEY-WANdisco
-EOT
-fi
-sudo rpm --import http://opensource.wandisco.com/RPM-GPG-KEY-WANdisco
-sudo yum install git -y
+rpm -U http://opensource.wandisco.com/centos/7/git/x86_64/wandisco-git-release-7-2.noarch.rpm 
+yum install -y git
+
