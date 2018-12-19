@@ -1,4 +1,4 @@
-!#/bin/bash
+#!/bin/bash
 # Install git on centos7
 
 sudo cat <<EOT >> /etc/yum.repos.d/wandisco-git.repo
