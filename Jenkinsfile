@@ -1,6 +1,6 @@
 pipeline {
     agent any
-    options{
+    options {
         timestamps()
     }
     agent any
