@@ -1,5 +1,5 @@
 pipeline {
-    agent { label 'ansible-docker-agent'} 
+    agent { label 'jkmaster-dev'} 
     options{
         timestamps()
     }
