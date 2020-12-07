@@ -3,8 +3,6 @@ pipeline {
     options {
         timestamps()
     }
-    agent any
-
     stages {
         stage('Build') {
             steps {
