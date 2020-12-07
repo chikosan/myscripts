@@ -1,7 +1,6 @@
 pipeline {
     agent { label 'ansible-docker-agent'} 
     options{
-        ansiColor 'xterm'
         timestamps()
     }
     agent any
