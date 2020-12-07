@@ -1,5 +1,5 @@
 pipeline {
-    agent { label 'jkmaster-dev'} 
+    agent any
     options{
         timestamps()
     }
