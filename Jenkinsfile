@@ -1,5 +1,6 @@
 pipeline {
-    agent { label 'ansible-docker-agent' }
+    agent any
+    // agent { label 'ansible-docker-agent' }
     options {
         timestamps()
     }
