@@ -1,6 +1,6 @@
 pipeline {
     
-    agent any
+    agent { label 'ansible-docker-agent' }
     stages {
         stage('Build') {
             steps {
