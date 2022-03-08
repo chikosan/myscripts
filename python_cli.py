@@ -7,14 +7,14 @@ def main(args=None):
     args = sys.argv[1:] if args is None else args
     
     def parse_boolean(value):
-    value = value.lower()
+        value = value.lower()
 
-    if value in ["true", "yes", "y", "1", "t"]:
-        return True
-    elif value in ["false", "no", "n", "0", "f"]:
+        if value in ["true", "True"]:
+            return True
+        elif value in ["false", "False"]:
+            return False
+
         return False
-
-    return False
 
     # Get configuration arguments form jenkins pipeline
     parser = argparse.ArgumentParser(
