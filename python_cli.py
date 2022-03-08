@@ -5,6 +5,16 @@ import sys
 
 def main(args=None):
     args = sys.argv[1:] if args is None else args
+    
+    def parse_boolean(value):
+    value = value.lower()
+
+    if value in ["true", "yes", "y", "1", "t"]:
+        return True
+    elif value in ["false", "no", "n", "0", "f"]:
+        return False
+
+    return False
 
     # Get configuration arguments form jenkins pipeline
     parser = argparse.ArgumentParser(
@@ -34,7 +44,7 @@ def main(args=None):
         "-debug",
         "--debug",
         required=False,
-        type=bool,
+        type=parse_boolean,
         dest="is_debug",
         default=True,
         help="Show more information",
