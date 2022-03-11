@@ -1,3 +1,5 @@
+import rich
+from rich.console import Console
 import argparse
 import sys
 
@@ -59,6 +61,7 @@ def main(args=None):
     
     print(f"debug_mode: {debug_mode}")
     print(f"debug_mode_type: {type(debug_mode)}")
+    console.print("Hello", "World!", style="bold red")
     
 
 if __name__ == "__main__":
