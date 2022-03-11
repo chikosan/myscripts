@@ -3,7 +3,7 @@ from rich.console import Console
 import argparse
 import sys
 
-
+console = Console()
 
 def main(args=None):
     args = sys.argv[1:] if args is None else args
